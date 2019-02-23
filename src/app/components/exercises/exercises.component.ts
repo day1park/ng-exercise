@@ -11,5 +11,23 @@ export class ExercisesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.exercises = [
+      {
+        id: 1,
+        title: "Exercise one",
+        completed: false
+      },
+      {
+        id: 2,
+        title: "Exercise two",
+        completed: true
+      },
+      {
+        id: 3,
+        title: "Exercise three",
+        completed: false
+      }
+    ];
+  }
 }
