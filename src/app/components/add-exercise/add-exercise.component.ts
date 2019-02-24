@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 
 @Component({
   selector: "app-add-exercise",
@@ -6,9 +6,20 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./add-exercise.component.css"]
 })
 export class AddExerciseComponent implements OnInit {
+  @Output() addExercise: EventEmitter<any> = new EventEmitter();
+
   title: string;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onSubmit() {
+    const exercise = {
+      title: this.title,
+      completed: false
+    };
+
+    this.addExercise.emit(exercise);
+  }
 }

@@ -26,4 +26,10 @@ export class ExercisesComponent implements OnInit {
     // remove from server
     this.exerciseService.deleteExercise(exercise).subscribe();
   }
+
+  addExercise(exercise: Exercise) {
+    this.exerciseService.addExercise(exercise).subscribe(exercise => {
+      this.exercises.push(exercise);
+    });
+  }
 }

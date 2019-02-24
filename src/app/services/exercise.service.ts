@@ -33,6 +33,11 @@ export class ExerciseService {
     return this.http.delete<Exercise>(url, httpOptions);
   }
 
+  // Add exercise
+  addExercise(exercise: Exercise): Observable<Exercise> {
+    return this.http.post<Exercise>(this.exercisesUrl, exercise, httpOptions);
+  }
+
   // toggle completed/ put request
   toggleCompleted(exercise: Exercise): Observable<any> {
     const url = `${this.exercisesUrl}/${exercise.id}`;
