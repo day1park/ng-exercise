@@ -6,9 +6,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ExercisesComponent } from "./components/exercises/exercises.component";
 import { ExerciseItemComponent } from "./components/exercise-item/exercise-item.component";
+import { HeaderComponent } from './components/layout/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, ExercisesComponent, ExerciseItemComponent],
+  declarations: [AppComponent, ExercisesComponent, ExerciseItemComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
