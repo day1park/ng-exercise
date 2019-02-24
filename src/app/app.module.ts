@@ -9,6 +9,7 @@ import { ExercisesComponent } from "./components/exercises/exercises.component";
 import { ExerciseItemComponent } from "./components/exercise-item/exercise-item.component";
 import { HeaderComponent } from "./components/layout/header/header.component";
 import { AddExerciseComponent } from "./components/add-exercise/add-exercise.component";
+import { AboutComponent } from './components/pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddExerciseComponent } from "./components/add-exercise/add-exercise.com
     ExercisesComponent,
     ExerciseItemComponent,
     HeaderComponent,
-    AddExerciseComponent
+    AddExerciseComponent,
+    AboutComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
