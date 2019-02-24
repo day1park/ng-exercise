@@ -19,4 +19,11 @@ export class ExercisesComponent implements OnInit {
     });
     // subscribe as .then
   }
+
+  deleteExercise(exercise: Exercise) {
+    //remove from UI
+    this.exercises = this.exercises.filter(i => i.id !== exercise.id);
+    // remove from server
+    this.exerciseService.deleteExercise(exercise).subscribe();
+  }
 }

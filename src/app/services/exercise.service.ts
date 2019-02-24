@@ -27,6 +27,12 @@ export class ExerciseService {
     return this.http.get<Exercise[]>(`${this.exercisesUrl}${this.limit10}`);
   }
 
+  // delete exercise
+  deleteExercise(exercise: Exercise): Observable<Exercise> {
+    const url = `${this.exercisesUrl}/${exercise.id}`;
+    return this.http.delete<Exercise>(url, httpOptions);
+  }
+
   // toggle completed/ put request
   toggleCompleted(exercise: Exercise): Observable<any> {
     const url = `${this.exercisesUrl}/${exercise.id}`;

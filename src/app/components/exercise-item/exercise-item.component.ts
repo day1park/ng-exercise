@@ -36,6 +36,5 @@ export class ExerciseItemComponent implements OnInit {
 
   onDelete(exercise) {
     this.deleteExercise.emit(exercise);
-    console.log("delete");
   }
 }
