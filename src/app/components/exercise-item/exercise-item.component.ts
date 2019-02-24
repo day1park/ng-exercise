@@ -12,4 +12,22 @@ export class ExerciseItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  // Set Dynamic Classes
+  setClasses() {
+    let classes = {
+      exercise: true,
+      "is-complete": this.exercise.completed
+    };
+
+    return classes;
+  }
+
+  onToggle(exercise) {
+    exercise.completed = !exercise.completed;
+  }
+
+  onDelete(exercise) {
+    console.log("delete");
+  }
 }
