@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ExerciseService } from "../../services/exercise.service";
+
 import { Exercise } from "../../models/Exercise";
 
 @Component({
@@ -9,25 +11,12 @@ import { Exercise } from "../../models/Exercise";
 export class ExercisesComponent implements OnInit {
   exercises: Exercise[];
 
-  constructor() {}
+  constructor(private exerciseService: ExerciseService) {}
 
   ngOnInit() {
-    this.exercises = [
-      {
-        id: 1,
-        title: "Exercise one",
-        completed: false
-      },
-      {
-        id: 2,
-        title: "Exercise two",
-        completed: true
-      },
-      {
-        id: 3,
-        title: "Exercise three",
-        completed: false
-      }
-    ];
+    this.exerciseService.getExercises().subscribe(exercises => {
+      this.exercises = exercises;
+    });
+    // subscribe as .then
   }
 }
