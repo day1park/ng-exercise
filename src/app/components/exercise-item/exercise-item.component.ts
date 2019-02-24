@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { ExerciseService } from "../../services/exercise.service";
 import { Exercise } from "src/app/models/Exercise";
 
@@ -9,6 +9,7 @@ import { Exercise } from "src/app/models/Exercise";
 })
 export class ExerciseItemComponent implements OnInit {
   @Input() exercise: Exercise;
+  @Output() deleteExercise: EventEmitter<Exercise> = new EventEmitter();
 
   constructor(private exerciseService: ExerciseService) {}
 
@@ -34,6 +35,7 @@ export class ExerciseItemComponent implements OnInit {
   }
 
   onDelete(exercise) {
+    this.deleteExercise.emit(exercise);
     console.log("delete");
   }
 }
