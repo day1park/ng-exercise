@@ -32,3 +32,8 @@ a {
 .btn:hover {
   background-attachment: #666;
 }
+
+img.angular-logo {
+  height: 150px;
+  width: 150px;
+}
