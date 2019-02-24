@@ -7,9 +7,10 @@ import { AppComponent } from "./app.component";
 import { ExercisesComponent } from "./components/exercises/exercises.component";
 import { ExerciseItemComponent } from "./components/exercise-item/exercise-item.component";
 import { HeaderComponent } from './components/layout/header/header.component';
+import { AddExerciseComponent } from './componenets/add-exercise/add-exercise.component';
 
 @NgModule({
-  declarations: [AppComponent, ExercisesComponent, ExerciseItemComponent, HeaderComponent],
+  declarations: [AppComponent, ExercisesComponent, ExerciseItemComponent, HeaderComponent, AddExerciseComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
