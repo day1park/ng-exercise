@@ -1,0 +1,10 @@
+<!-- <p>
+  exercises works!
+</p> -->
+<app-add-exercise (addExercise)="addExercise($event)"></app-add-exercise>
+<app-exercise-item
+  *ngFor="let exercise of exercises"
+  [exercise]="exercise"
+  (deleteExercise)="deleteExercise($event)"
+>
+</app-exercise-item>
